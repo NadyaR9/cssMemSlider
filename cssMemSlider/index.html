@@ -5,31 +5,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Css Mem Slider</title>
 </head>
 
 <body>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="slide-wrapper">
-            <div class="slide-item"><img src="assets/mems/1.jpg" alt="mem1"></div>
+            <div class="slide-item slide-item_active"><img src="assets/mems/1.jpg" alt="mem1"></div>
             <div class="slide-item"><img src="assets/mems/2.jpg" alt="mem2"></div>
             <div class="slide-item"><img src="assets/mems/3.jpg" alt="mem3"></div>
             <div class="slide-item"><img src="assets/mems/4.jpg" alt="mem4"></div>
             <div class="slide-item"><img src="assets/mems/5.jpg" alt="mem5"></div>
         </div>
         <div class="control-wrapper">
-            <div class="control-label"></div>
+            <div class="control-labels">
+                <h2 class="control-label control-label_active">mem1</h2>
+                <h2 class="control-label">mem2</h2>
+                <h2 class="control-label">mem3</h2>
+                <h2 class="control-label">mem4</h2>
+                <h2 class="control-label">mem5</h2>
+            </div>
             <div class="control-dots">
-                <span class="control-dot"></span>
-                <span class="control-dot"></span>
-                <span class="control-dot"></span>
-                <span class="control-dot"></span>
-                <span class="control-dot"></span>
+                <div class="control-dot">
+                    <div></div>
+                </div>
+                <div class="control-dot">
+                    <div></div>
+                </div>
+                <div class="control-dot">
+                    <div></div>
+                </div>
+                <div class="control-dot">
+                    <div></div>
+                </div>
+                <div class="control-dot">
+                    <div></div>
+                </div>
             </div>
         </div>
+    </div> -->
+    <div class="slider">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
+        <div class="slides">
+
+
+
+            <div class="slide s1"><img src="assets/mems/1.jpg" alt=""></div>
+            <div class="slide"><img src="assets/mems/2.jpg" alt=""></div>
+            <div class="slide"><img src="assets/mems/3.jpg" alt=""></div>
+            <div class="slide"><img src="assets/mems/4.jpg" alt=""></div>
+            <div class="slide"><img src="assets/mems/5.jpg" alt=""></div>
+        </div>
+        <div class="navigation">
+
+            <div class="labels">
+                <h2 class="label">mem1</h2>
+                <h2 class="label">mem2</h2>
+                <h2 class="label">mem3</h2>
+                <h2 class="label">mem4</h2>
+                <h2 class="label">mem5</h2>
+            </div>
+            <div class="dots">
+                <label for="r1" class="dot"></label>
+                <label for="r2" class="dot"></label>
+                <label for="r3" class="dot"></label>
+                <label for="r4" class="dot"></label>
+                <label for="r5" class="dot"></label>
+            </div>
+
+
+        </div>
     </div>
-    <script stc="script.js"></script>
 </body>
 
 </html>

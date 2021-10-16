@@ -26,14 +26,18 @@ input[name="r"] {
     overflow: hidden;
 }
 .slides {
-    width: 500%;
+    width: 100%;
     height: calc(80vh - 20px);
     display: flex;
 }
 .slide {
     animation-duration: 1s;
-    width: 20%;
-    background: url(../assets/mems/1.jpg);
+    width: 100%;
+    height: 100%;
+    background: center / cover no-repeat url(../assets/mems/1.jpg);
+    // background-repeat: no-repeat;
+    // //background-position: center;
+    // background-size: cover;
     // img {
     //     width: 100%; 
     //     height: 100%;
@@ -97,9 +101,9 @@ input[name="r"] {
     0% {opacity: 0; transform: scale(0.6);}
     100% {opacity: 1; transform: scale(1);}
 }
-#r1:checked ~ .slides .s1 {
+#r1:checked ~ .slides .slide {
     animation-name: slide1;
-    background: url(../assets/mems/1.jpg);
+    background: center / cover no-repeat url(../assets/mems/1.jpg);
     //margin-left: 0;
 }
 #r1:checked ~ .navigation .dots .dot:nth-child(1) { 
@@ -108,10 +112,10 @@ input[name="r"] {
 #r1:checked ~ .navigation .labels .label:nth-child(1) { 
     display: block;
 }
-#r2:checked ~ .slides .s1 {
+#r2:checked ~ .slides .slide {
     animation-name: slide2;
     //margin-left: -20%;
-    background: url(../assets/mems/2.jpg);
+    background: center / cover no-repeat url(../assets/mems/2.jpg);
 }
 #r2:checked ~ .navigation .dots .dot:nth-child(2) { 
     @include dot_checked;
@@ -119,10 +123,10 @@ input[name="r"] {
 #r2:checked ~ .navigation .labels .label:nth-child(2) { 
     display: block;
 }
-#r3:checked ~ .slides .s1 {
+#r3:checked ~ .slides .slide {
     animation-name: slide3;
     //margin-left: -40%;
-    background: url(../assets/mems/3.jpg);
+    background: center / cover no-repeat url(../assets/mems/3.jpg);
 }
 #r3:checked ~ .navigation .dots .dot:nth-child(3) { 
     @include dot_checked;
@@ -130,9 +134,9 @@ input[name="r"] {
 #r3:checked ~ .navigation .labels .label:nth-child(3) { 
     display: block;
 }
-#r4:checked ~ .slides .s1 {
+#r4:checked ~ .slides .slide {
     animation-name: slide4;
-    background: url(../assets/mems/3.jpg);
+    background: center / cover no-repeat url(../assets/mems/4.jpg);
 }
 #r4:checked ~ .navigation .dots .dot:nth-child(4) { 
     @include dot_checked;
@@ -140,9 +144,9 @@ input[name="r"] {
 #r4:checked ~ .navigation .labels .label:nth-child(4) { 
     display: block;
 }
-#r5:checked ~ .slides .s1 {
+#r5:checked ~ .slides .slide {
     animation-name: slide5;
-    background: url(../assets/mems/3.jpg);
+    background: center / cover no-repeat url(../assets/mems/5.jpg);
 }
 #r5:checked ~ .navigation .dots .dot:nth-child(5) { 
     @include dot_checked;

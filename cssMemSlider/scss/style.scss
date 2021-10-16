@@ -31,7 +31,7 @@ input[name="r"] {
     display: flex;
 }
 .slide {
-    animation-duration: 1s;
+    animation-duration: 2s;
     width: 100%;
     height: 100%;
     background: center / cover no-repeat url(../assets/mems/1.jpg);
@@ -78,29 +78,36 @@ input[name="r"] {
     width: 80%;
 }
 .label {
+    animation-duration: 2s;
     display: none;
 }
 
 @keyframes slide1 {
-    0% {opacity: 0; transform: scale(0.6);}
+    0% {opacity: 0; transform: scale(0);}
     100% {opacity: 1; transform: scale(1);}
 }
 @keyframes slide2 {
-    0% {opacity: 0; transform: scale(0.6);}
+    0% {opacity: 0; transform: scale(0);}
     100% {opacity: 1; transform: scale(1);}
 }
 @keyframes slide3 {
-    0% {opacity: 0; transform: scale(0.6);}
+    0% {opacity: 0; transform: scale(0);}
     100% {opacity: 1; transform: scale(1);}
 }
 @keyframes slide4 {
-    0% {opacity: 0; transform: scale(0.6);}
+    0% {opacity: 0; transform: scale(0);}
     100% {opacity: 1; transform: scale(1);}
 }
 @keyframes slide5 {
-    0% {opacity: 0; transform: scale(0.6);}
+    0% {opacity: 0; transform: scale(0);}
     100% {opacity: 1; transform: scale(1);}
 }
+
+@keyframes mem1 {
+    0% {margin-left: -50%;}
+    100% {margin-left: 0;}
+}
+
 #r1:checked ~ .slides .slide {
     animation-name: slide1;
     background: center / cover no-repeat url(../assets/mems/1.jpg);
@@ -110,7 +117,9 @@ input[name="r"] {
     @include dot_checked;
 }
 #r1:checked ~ .navigation .labels .label:nth-child(1) { 
+    animation-name: mem1;
     display: block;
+    
 }
 #r2:checked ~ .slides .slide {
     animation-name: slide2;
@@ -121,6 +130,7 @@ input[name="r"] {
     @include dot_checked;
 }
 #r2:checked ~ .navigation .labels .label:nth-child(2) { 
+    animation-name: mem1;
     display: block;
 }
 #r3:checked ~ .slides .slide {
@@ -132,6 +142,7 @@ input[name="r"] {
     @include dot_checked;
 }
 #r3:checked ~ .navigation .labels .label:nth-child(3) { 
+    animation-name: mem1;
     display: block;
 }
 #r4:checked ~ .slides .slide {
@@ -142,6 +153,7 @@ input[name="r"] {
     @include dot_checked;
 }
 #r4:checked ~ .navigation .labels .label:nth-child(4) { 
+    animation-name: mem1;
     display: block;
 }
 #r5:checked ~ .slides .slide {
@@ -152,6 +164,7 @@ input[name="r"] {
     @include dot_checked;
 }
 #r5:checked ~ .navigation .labels .label:nth-child(5) { 
+    animation-name: mem1;
     display: block;
 }
 // .container {

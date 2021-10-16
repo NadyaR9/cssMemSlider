@@ -31,13 +31,14 @@ input[name="r"] {
     display: flex;
 }
 .slide {
+    animation-duration: 1s;
     width: 20%;
-    transition: 0.5s all;
-    img {
-        width: 100%; 
-        height: 100%;
-        object-fit: cover;
-    }
+    background: url(../assets/mems/1.jpg);
+    // img {
+    //     width: 100%; 
+    //     height: 100%;
+    //     object-fit: cover;
+    // }
 }
 .navigation {
     margin-top: 40px;
@@ -75,35 +76,79 @@ input[name="r"] {
 .label {
     display: none;
 }
+
+@keyframes slide1 {
+    0% {opacity: 0; transform: scale(0.6);}
+    100% {opacity: 1; transform: scale(1);}
+}
+@keyframes slide2 {
+    0% {opacity: 0; transform: scale(0.6);}
+    100% {opacity: 1; transform: scale(1);}
+}
+@keyframes slide3 {
+    0% {opacity: 0; transform: scale(0.6);}
+    100% {opacity: 1; transform: scale(1);}
+}
+@keyframes slide4 {
+    0% {opacity: 0; transform: scale(0.6);}
+    100% {opacity: 1; transform: scale(1);}
+}
+@keyframes slide5 {
+    0% {opacity: 0; transform: scale(0.6);}
+    100% {opacity: 1; transform: scale(1);}
+}
 #r1:checked ~ .slides .s1 {
-    margin-left: 0;
+    animation-name: slide1;
+    background: url(../assets/mems/1.jpg);
+    //margin-left: 0;
 }
 #r1:checked ~ .navigation .dots .dot:nth-child(1) { 
     @include dot_checked;
 }
+#r1:checked ~ .navigation .labels .label:nth-child(1) { 
+    display: block;
+}
 #r2:checked ~ .slides .s1 {
-    margin-left: -20%;
+    animation-name: slide2;
+    //margin-left: -20%;
+    background: url(../assets/mems/2.jpg);
 }
 #r2:checked ~ .navigation .dots .dot:nth-child(2) { 
     @include dot_checked;
 }
+#r2:checked ~ .navigation .labels .label:nth-child(2) { 
+    display: block;
+}
 #r3:checked ~ .slides .s1 {
-    margin-left: -40%;
+    animation-name: slide3;
+    //margin-left: -40%;
+    background: url(../assets/mems/3.jpg);
 }
 #r3:checked ~ .navigation .dots .dot:nth-child(3) { 
     @include dot_checked;
 }
+#r3:checked ~ .navigation .labels .label:nth-child(3) { 
+    display: block;
+}
 #r4:checked ~ .slides .s1 {
-    margin-left: -60%;
+    animation-name: slide4;
+    background: url(../assets/mems/3.jpg);
 }
 #r4:checked ~ .navigation .dots .dot:nth-child(4) { 
     @include dot_checked;
 }
+#r4:checked ~ .navigation .labels .label:nth-child(4) { 
+    display: block;
+}
 #r5:checked ~ .slides .s1 {
-    margin-left: -80%;
+    animation-name: slide5;
+    background: url(../assets/mems/3.jpg);
 }
 #r5:checked ~ .navigation .dots .dot:nth-child(5) { 
     @include dot_checked;
+}
+#r5:checked ~ .navigation .labels .label:nth-child(5) { 
+    display: block;
 }
 // .container {
 //     height: 100vh;

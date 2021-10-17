@@ -46,7 +46,7 @@ input[name="r"] {
     min-height: 50px;
     background: var(--dark-color);
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     align-items: center;
 }
@@ -167,7 +167,7 @@ input[name="r"] {
     display: block;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .slider {
         width: 90vw;
     }

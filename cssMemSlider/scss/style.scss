@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Forum:wght@100;300;500;700&display=swap');
 :root {
     --dark-color: #6C4A4A;
     --medium-color: #C89595;
@@ -10,6 +10,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Forum', sans-serif;
+    font-weight: 300;
 }
 body {
     background: var(--normal-color);
@@ -60,6 +62,7 @@ input[name="r"] {
     height: 20px;
     border-radius: 50%;
     background: var(--light-color);
+    cursor: pointer;
     &:hover {
         background: var(--medium-color);
     }
@@ -75,6 +78,7 @@ input[name="r"] {
 .label {
     animation-duration: 2s;
     display: none;
+    font-size: 24px;
 }
 
 @keyframes slide1 {
@@ -105,7 +109,7 @@ input[name="r"] {
 
 #r1:checked ~ .slides .slide {
     animation-name: slide1;
-    background: center / cover no-repeat url(../assets/mems/1.jpg);
+    background: center / cover no-repeat url(../assets/mems/monkey-pissed.gif);
     //margin-left: 0;
 }
 #r1:checked ~ .navigation .dots .dot:nth-child(1) { 
@@ -119,7 +123,7 @@ input[name="r"] {
 #r2:checked ~ .slides .slide {
     animation-name: slide2;
     //margin-left: -20%;
-    background: center / cover no-repeat url(../assets/mems/2.jpg);
+    background: center / cover no-repeat url(../assets/mems/monkey-computer-not-working.gif);
 }
 #r2:checked ~ .navigation .dots .dot:nth-child(2) { 
     @include dot_checked;
@@ -131,7 +135,7 @@ input[name="r"] {
 #r3:checked ~ .slides .slide {
     animation-name: slide3;
     //margin-left: -40%;
-    background: center / cover no-repeat url(../assets/mems/3.jpg);
+    background: center / cover no-repeat url(../assets/mems/work-angry.gif);
 }
 #r3:checked ~ .navigation .dots .dot:nth-child(3) { 
     @include dot_checked;
@@ -142,7 +146,7 @@ input[name="r"] {
 }
 #r4:checked ~ .slides .slide {
     animation-name: slide4;
-    background: center / cover no-repeat url(../assets/mems/4.jpg);
+    background: center / cover no-repeat url(../assets/mems/tw-tech-support-pc.gif);
 }
 #r4:checked ~ .navigation .dots .dot:nth-child(4) { 
     @include dot_checked;
@@ -153,7 +157,7 @@ input[name="r"] {
 }
 #r5:checked ~ .slides .slide {
     animation-name: slide5;
-    background: center / cover no-repeat url(../assets/mems/5.jpg);
+    background: center / cover no-repeat url(../assets/mems/cat-asleep.gif);
 }
 #r5:checked ~ .navigation .dots .dot:nth-child(5) { 
     @include dot_checked;
@@ -178,19 +182,20 @@ input[name="r"] {
         height: calc(20vh - 60px);
         min-height: 100px;
         flex-wrap: wrap-reverse;
-        // min-height: 50px;
-        // background: var(--dark-color);
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: space-between;
-        // align-items: center;
     } 
     .labels {
         width: 100%;
     }
+    .label {
+        font-size: 16px;
+    }
     .dots {
         width: 100%;
         justify-content: center;
+    }
+    .dot {
+        width: 15px;
+        height: 15px;
     }
 }
 

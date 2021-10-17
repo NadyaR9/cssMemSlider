@@ -1,0 +1,4 @@
+@mixin dot_checked{
+    border: 3px solid var(--light-color);
+    background: var(--dark-color);
+}
